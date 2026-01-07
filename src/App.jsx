@@ -39,7 +39,8 @@ function App() {
            {/*        <Route path={"/todolist"} element={<TodoList />}/>*/}
            {/*        <Route path={"/board"} element={<Board/>}/>*/}
            {/*        <Route path={"/cart"} element={<Cart />} />*/}
-           {/*        <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />}/>*/}
+           {/*        <Route path={"/productList"} element={<Products products={products} setProducts={setProducts} />} // איפה שהצד לקוח (התכנית הזאת) עושה קריאה לצד שרת (שולחת בקשה בקומפוננה פרודאקטס שמקבלת בפרופס את רשימת המוצרים שקיימים בחנות שהיו מוגדרים כאן למעלה אבל בהמשך העברנו לקומפוננטה שואו קטגורי)
+           />*/}
            {/*        <Route path={"/register"} element={<Register />} />*/}
            {/*    </Routes>*/}
            {/*</BrowserRouter>*/}

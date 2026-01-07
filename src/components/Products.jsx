@@ -4,7 +4,7 @@ import Product from "./Product.jsx";
 
 function Products({products ,setProducts}) {
 
-    useEffect(() => {
+    useEffect(() => { // איפה שהצד לקוח (התכנית הזאת) עושה קריאה לצד שרת (שולחת בקשה)
         axios.get("http://localhost:8080/get-products")
             .then(response=>{
                 setProducts(response.data)

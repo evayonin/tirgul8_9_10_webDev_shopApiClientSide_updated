@@ -1,9 +1,9 @@
 import {useState} from "react";
 import axios from "axios";
 
-function Register() {
+function Register() { // כמו שנצטרך לעשות בעבודה אבל יש עוד אופציה בregister2. אביה השתמשה בזה שכאן לתרגיל החנות.
 
-    const[user,setUser] = useState({
+    const[user,setUser] = useState({ // ע״י אובייקט עם 2 שדות במקום 2 משתנים
         name:"",
         password:"",
     });
@@ -13,7 +13,7 @@ function Register() {
         //localhost -> ip - הכתובת של השרת
         //8080 -> פורט
         //register-user הנתיב לשירות הספציפי בתוך האפליקציה / בשרת
-        axios.post("http://localhost:8080/register-user",{name:user.name,password:user.password}).
+        axios.post("http://localhost:8080/register-user",{name:user.name,password:user.password}). // ככה חייב לשלוח את הדאטה כדי שיעבוד ויישלח מהשרת לדאטה בייס את היוזר בצורה תקינה
         then((response)=>{
             console.log(response.data)
 
@@ -28,7 +28,8 @@ function Register() {
                 <input type={"text"}
                        value={user.name}
                        placeholder={"enter username"}
-                       onChange={(e) => setUser({...user, name: e.target.value})}/>
+                       onChange={(e) => setUser({...user, name: e.target.value})} // כשרוצים לעדכן רק שדה אחד בסטייט של המשתנה
+                />
                 <br/>
                 {user.name.length < 5 && <label> username len must to be at least 5 letters </label>}
             </div>

@@ -36,7 +36,7 @@ const ShowCategory = () => {
     return(
         <div>
             {
-                categories.length===0?
+                categories.length===0? // הקטגוריות חוזרות מבקשת הקטגוריות מהצד שרת (יש שם בקונטרולר נתיב עם מתודה שמביאה לי את הקטגוריות)  בעת עליית הקומפוננטה
                     <p>No categories yet...</p>:
                     <select value={selectCategory}
                             onChange={(event)=>setSelectCategory(event.target.value)}>
